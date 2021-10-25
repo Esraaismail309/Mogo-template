@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+// vendors
+$vendors: "-moz-",
+"-webkit-",
+"-o-",
+"-ms-",
+"";
+//fonts
+$Kaushan: 'Kaushan Script',
+cursive;
+$montserrat:'Montserrat',
+sans-serif;
+// colors
+$startGradien:#db7475e6;
+$endGradient:#e4cd7de6;
+$bgColor:#3bd3ba;
+$grayBg: rgb(248,
+248,
+248);
+$shadowColor:#95e1d3;
+$paragraphColor:#a3988f;
+$disgnLayer: rgba(237,
+237,
+237,
+0.80);
+$white:#fff;
+$black:#000;
+//images
+$designBg:url(../assets/clientbg.jpg);
+//breakpoint
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;

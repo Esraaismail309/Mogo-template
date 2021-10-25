@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+body .about .about__header::after, body .services .services__header::after, body .design .design__header::after, body .what_we_do .what_we_do__header::after, body .team .team__header::after, body .gallery .gallery__header::after, body .clients .clients__header::after, body .blog .blog__header::after, body .slider h5::before, body .feedback h5::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #db7475e6; }
+
+.name {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #db7475e6; }
+
+body .about .about__header, body .services .services__header, body .design .design__header, body .what_we_do .what_we_do__header, body .team .team__header, body .gallery .gallery__header, body .clients .clients__header, body .blog .blog__header {
+  text-align: center;
+  position: relative; }
+  body .about .about__header::after, body .services .services__header::after, body .design .design__header::after, body .what_we_do .what_we_do__header::after, body .team .team__header::after, body .gallery .gallery__header::after, body .clients .clients__header::after, body .blog .blog__header::after {
+    top: 50%;
+    left: 48%; }
+  body .about .about__header h5, body .services .services__header h5, body .design .design__header h5, body .what_we_do .what_we_do__header h5, body .team .team__header h5, body .gallery .gallery__header h5, body .clients .clients__header h5, body .blog .blog__header h5 {
+    font-family: "Kaushan Script", cursive; }
+  body .about .about__header h4, body .services .services__header h4, body .design .design__header h4, body .what_we_do .what_we_do__header h4, body .team .team__header h4, body .gallery .gallery__header h4, body .clients .clients__header h4, body .blog .blog__header h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800; }
+  body .about .about__header p, body .services .services__header p, body .design .design__header p, body .what_we_do .what_we_do__header p, body .team .team__header p, body .gallery .gallery__header p, body .clients .clients__header p, body .blog .blog__header p {
+    color: #a3988f;
+    font-size: 15px;
+    width: 70%;
+    margin: 3rem auto 0; }
+
+body {
+  margin: 0 auto; }
+  body header .navbar {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1rem 8rem; }
+    body header .navbar .nav-item {
+      position: relative; }
+      body header .navbar .nav-item a {
+        color: #fff; }
+      body header .navbar .nav-item .active {
+        color: #e4cd7de6 !important; }
+        body header .navbar .nav-item .active::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 14px;
+          width: 35px;
+          height: 2px;
+          background-color: #e4cd7de6; }
+  body header .header .carousel-indicators [data-bs-target] {
+    width: 13rem;
+    margin: 0 1rem;
+    position: relative;
+    bottom: 2rem; }
+    body header .header .carousel-indicators [data-bs-target]::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35%;
+      height: 3px;
+      background-color: red; }
+  body header .header .hhh {
+    position: absolute;
+    bottom: 0rem;
+    left: 14rem;
+    z-index: 555; }
+  @media (max-width: 576px) {
+    body header .header .hhh {
+      bottom: 1.8rem;
+      left: 5.5rem; }
+      body header .header .hhh span {
+        margin-right: 1rem !important;
+        font-size: 15px !important; }
+        body header .header .hhh span h4 {
+          font-size: 16px; } }
+  @media (min-width: 576px) {
+    body header .header .hhh {
+      bottom: 1rem;
+      left: 7.5rem; }
+      body header .header .hhh span {
+        margin-right: 4rem !important;
+        font-size: 15px !important; }
+        body header .header .hhh span h4 {
+          font-size: 17px; } }
+  @media (min-width: 768px) {
+    body header .header .hhh {
+      bottom: 1rem;
+      left: 7.6rem; }
+      body header .header .hhh span {
+        margin-right: 4rem !important; } }
+  @media (min-width: 992px) {
+    body header .header .hhh {
+      bottom: 1rem;
+      left: 8rem; }
+      body header .header .hhh span {
+        margin-right: 5rem !important; } }
+  @media (min-width: 1200px) {
+    body header .header .hhh {
+      bottom: 1rem;
+      left: 13.5rem; }
+      body header .header .hhh span {
+        margin-right: 9rem !important; } }
+  body header .header .carousel-caption {
+    bottom: 12rem !important; }
+    body header .header .carousel-caption h2 {
+      font-family: "Kaushan Script", cursive;
+      font-size: 3.5rem; }
+    body header .header .carousel-caption h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 6.5rem;
+      font-weight: 800;
+      width: 60%;
+      margin: auto; }
+    body header .header .carousel-caption button {
+      border: 2px solid #fff;
+      background-color: transparent;
+      margin-top: 1rem;
+      padding: .4rem 1.8rem;
+      color: #fff;
+      font-size: 15px; }
+  body .about .about__item .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #db7475e6 0%, #e4cd7de6 100%);
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer; }
+    body .about .about__item .overlay:hover {
+      opacity: 1; }
+  body .about .about__item:hover {
+    box-shadow: 5px 5px 9px 2px #95e1d3; }
+  body .counter {
+    background-color: #3bd3ba; }
+    @media (max-width: 992px) {
+      body .counter .counter_item {
+        border: none !important; } }
+    body .counter h3 {
+      font-size: 3rem; }
+  body .services .services__header::after {
+    top: 5.5rem;
+    left: 48%; }
+  body .services i {
+    color: #3bd3ba; }
+  body .design {
+    background-image: url(../assets/clientbg.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+    body .design .design__header::after {
+      top: 7.5rem;
+      left: 48%; }
+    body .design .desin-overlay {
+      background-color: rgba(237, 237, 237, 0.8);
+      width: 100%;
+      height: 100%; }
+    @media (min-width: 576px) {
+      body .design .designe-img {
+        bottom: -6rem;
+        right: -4rem; } }
+    @media (min-width: 992px) {
+      body .design .designe-img {
+        bottom: -6rem;
+        right: 6rem; } }
+    @media (min-width: 1200px) {
+      body .design .designe-img {
+        bottom: -6rem;
+        right: 17rem; } }
+  body .what_we_do i {
+    color: #95e1d3; }
+  body .slider {
+    background-color: #f8f8f8; }
+    body .slider i {
+      font-size: 2rem;
+      color: #3bd3ba;
+      padding: 2.5rem;
+      border: 2px solid #3bd3ba;
+      margin-top: 10px; }
+    body .slider h5 {
+      font-family: "Kaushan Script", cursive;
+      position: relative;
+      margin-left: 3.5rem; }
+      body .slider h5::before {
+        top: 10px;
+        left: -3.5rem; }
+  body .team .team__item .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #db7475e6 0%, #e4cd7de6 100%);
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer; }
+    body .team .team__item .overlay i {
+      color: #db7475e6;
+      background-color: #e4cd7de6;
+      transition: all 0.5s; }
+      body .team .team__item .overlay i:hover {
+        background-color: #db7475e6;
+        color: #fff; }
+    body .team .team__item .overlay:hover {
+      opacity: 1; }
+  body .team .team__item:hover {
+    box-shadow: 5px 5px 9px 2px #95e1d3; }
+  body .gallery .gallery__header {
+    position: relative; }
+  body .gallery figure {
+    margin: 0; }
+  body .gallery .gallery_img img {
+    display: block; }
+  body .gallery .gallery_img .gallery_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #db7475e6 0%, #e4cd7de6 100%);
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer; }
+    body .gallery .gallery_img .gallery_overlay:hover {
+      opacity: 1; }
+  body .feedback h5 {
+    font-family: "Kaushan Script", cursive;
+    position: relative;
+    margin-left: 3.5rem; }
+    body .feedback h5::before {
+      top: 10px;
+      left: -3.5rem; }
+  body .brands {
+    background-color: #f8f8f8;
+    padding: 2rem 6rem; }
+  body .clients {
+    background-image: url(../assets/clientbg.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+    body .clients .clients__header::after {
+      top: 6.5rem;
+      left: 48%; }
+    body .clients .clients_overlay {
+      background-color: rgba(237, 237, 237, 0.8);
+      width: 100%;
+      height: 100%; }
+  body .blog .blog__header::after {
+    top: 5rem;
+    left: 48%; }
+  body .blog i {
+    color: #3bd3ba;
+    font-size: 15px; }
+  body .blog .calender {
+    background-color: #3bd3ba;
+    padding: 6px 12px 6px; }
+  @media (max-width: 576px) {
+    body .blog .calender {
+      top: 5rem;
+      left: -0.8rem; } }
+  @media (min-width: 576px) {
+    body .blog .calender {
+      top: 11rem;
+      left: -0.8rem; } }
+  @media (min-width: 768px) {
+    body .blog .calender {
+      top: 1.5rem;
+      left: -0.8rem; } }
+  @media (min-width: 992px) {
+    body .blog .calender {
+      top: 5rem;
+      left: -0.8rem; } }
+  @media (min-width: 1200px) {
+    body .blog .calender {
+      top: 10rem;
+      left: -0.8rem; } }
+  body .footer figure {
+    margin: 0;
+    padding: 2px; }
+  body .footer i {
+    color: #3bd3ba; }
+  body .footer input {
+    padding: 0.39rem;
+    border: 1px solid #a3988f; }
+  body .footer ::placeholder {
+    color: rgba(163, 152, 143, 0.6);
+    margin-left: 10px; }
+  body .footer button {
+    background-color: #3bd3ba;
+    border: 1px solid transparent;
+    padding: 0.39rem 1.4rem;
+    color: #fff; }
+  body .footer span {
+    color: #db7475e6; }

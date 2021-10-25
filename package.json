@@ -1,0 +1,14 @@
+{
+    "name": "name",
+    "description": "description",
+    "authors": "author",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "scripts": {
+        "scss": "node-sass --watch scss -o css"
+    },
+    "dependencies": {
+        "counterup": "^1.0.2",
+        "waypoints": "^4.0.1"
+    }
+}

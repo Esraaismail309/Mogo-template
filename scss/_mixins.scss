@@ -1,0 +1,23 @@
+    @mixin linear-gradient($direction, $from, $to) {
+        background: linear-gradient($direction, $from 0%, $to 100%);
+    }
+    
+    @mixin background-image($filePath, $bgXpos:0, $bgYpos:0, $bgReapeat:no-repeat, $bgSize:cover, $bgAttachment:fixed) {
+        background-image: ($filePath);
+        background-position: $bgXpos $bgYpos;
+        background-repeat: $bgReapeat;
+        background-size: $bgSize;
+        background-attachment: $bgAttachment;
+    }
+    
+    @mixin breakpoint-min($bp) {
+        @media (min-width: $bp) {
+            @content;
+        }
+    }
+    
+    @mixin breakpoint-max($bp) {
+        @media (max-width: $bp) {
+            @content;
+        }
+    }
