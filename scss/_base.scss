@@ -6,21 +6,14 @@
     background-color: $startGradien;
 }
 
-.name {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: $startGradien;
-}
-
 %title {
     text-align: center;
     position: relative;
     &::after {
         @extend %separator;
-        top: 50%;
-        left: 48%;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     h5 {
         font-family: $Kaushan;
@@ -63,6 +56,13 @@ body {
                     }
                 }
             }
+            .navbar-nav {
+                @if dir==rtl {
+                    $left: right;
+                    $right: left;
+                }
+                margin-#{$left}:auto;
+            }
         }
         .header {
             .carousel-indicators [data-bs-target] {
@@ -77,67 +77,15 @@ body {
                     left: 0;
                     width: 35%;
                     height: 3px;
-                    background-color: red;
+                    background-color: $startGradien;
                 }
             }
-            .hhh {
+            .carousel_title {
                 position: absolute;
-                bottom: 0rem;
-                left: 14rem;
+                bottom: 1rem;
+                left: 16.5rem;
                 z-index: 555;
-            }
-            @include breakpoint-max($sm) {
-                .hhh {
-                    bottom: 1.8rem;
-                    left: 5.5rem;
-                    span {
-                        margin-right: 1rem !important;
-                        font-size: 15px !important;
-                        h4 {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-            @include breakpoint-min($sm) {
-                .hhh {
-                    bottom: 1rem;
-                    left: 7.5rem;
-                    span {
-                        margin-right: 4rem !important;
-                        font-size: 15px !important;
-                        h4 {
-                            font-size: 17px;
-                        }
-                    }
-                }
-            }
-            @include breakpoint-min($md) {
-                .hhh {
-                    bottom: 1rem;
-                    left: 7.6rem;
-                    span {
-                        margin-right: 4rem !important;
-                    }
-                }
-            }
-            @include breakpoint-min($lg) {
-                .hhh {
-                    bottom: 1rem;
-                    left: 8rem;
-                    span {
-                        margin-right: 5rem !important;
-                    }
-                }
-            }
-            @include breakpoint-min($xl) {
-                .hhh {
-                    bottom: 1rem;
-                    left: 13.5rem;
-                    span {
-                        margin-right: 9rem !important;
-                    }
-                }
+                width: 75%;
             }
             .carousel-caption {
                 bottom: 12rem !important;
@@ -159,6 +107,71 @@ body {
                     padding: .4rem 1.8rem;
                     color: $white;
                     font-size: 15px
+                }
+            }
+            @include breakpoint-max($sm) {
+                .carousel_title {
+                    bottom: 1.8rem;
+                    left: 4.2rem;
+                    span {
+                        font-size: 12px !important;
+                        h4 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            @include breakpoint-min($md) {
+                .carousel_title {
+                    bottom: 1rem;
+                    left: 8.5rem;
+                    width: 70%;
+                }
+                .carousel-caption {
+                    bottom: 5rem !important;
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                    h1 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            @include breakpoint-min($lg) {
+                .carousel_title {
+                    bottom: 1rem;
+                    left: 11rem;
+                }
+            }
+            @include breakpoint-min($xl) {
+                .carousel-caption {
+                    bottom: 10rem !important;
+                    h1 {
+                        font-size: 6.5rem;
+                    }
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+                .carousel_title {
+                    left: 15.5rem;
+                }
+            }
+            @include breakpoint-min($sm) {
+                .carousel-caption {
+                    bottom: 10rem !important;
+                    h1 {
+                        font-size: 3rem;
+                        z-index: 99999;
+                        color: $white;
+                    }
+                    .carousel_title {
+                        bottom: 1rem;
+                        left: 6.5rem;
+                        span {
+                            font-size: 15px !important;
+                        }
+                    }
                 }
             }
         }
@@ -204,7 +217,6 @@ body {
             &::after {
                 @extend %separator;
                 top: 5.5rem;
-                left: 48%;
             }
         }
         i {
@@ -228,7 +240,6 @@ body {
             &::after {
                 @extend %separator;
                 top: 7.5rem;
-                left: 48%;
             }
         }
         .desin-overlay {
@@ -239,7 +250,7 @@ body {
         @include breakpoint-min($sm) {
             .designe-img {
                 bottom: -6rem;
-                right: -4rem;
+                right: -2rem;
             }
         }
         @include breakpoint-min($lg) {
@@ -262,13 +273,43 @@ body {
         i {
             color: $shadowColor;
         }
+        @include breakpoint-max($lg) {
+            .what_we_do__header {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 3px;
+                    background-color: $startGradien;
+                    top: 40%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        @include breakpoint-max($sm) {
+            .what_we_do__header {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 60px;
+                    height: 3px;
+                    background-color: $startGradien;
+                    top: 25%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
     }
     .slider {
         background-color: $grayBg;
         i {
             font-size: 2rem;
             color: $bgColor;
-            padding: 2.5rem;
+            padding: 2rem;
             border: 2px solid $bgColor;
             margin-top: 10px;
         }
@@ -280,6 +321,18 @@ body {
                 @extend %separator;
                 top: 10px;
                 left: -3.5rem;
+            }
+        }
+        @include breakpoint-max($sm) {
+            display: none !important;
+        }
+        @include breakpoint-max($lg) {
+            i {
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
+            .row {
+                width: 100% !important;
             }
         }
     }
@@ -301,7 +354,6 @@ body {
                 i {
                     color: $startGradien;
                     background-color: $endGradient;
-                    // padding: 1rem;
                     transition: all 0.5s;
                     &:hover {
                         background-color: $startGradien;
@@ -353,7 +405,15 @@ body {
             &::before {
                 @extend %separator;
                 top: 10px;
-                left: -3.5rem;
+                left: -4rem;
+            }
+        }
+        @include breakpoint-max($sm) {
+            display: none !important;
+        }
+        @include breakpoint-max($lg) {
+            .row {
+                width: 100% !important;
             }
         }
     }
@@ -368,7 +428,6 @@ body {
             &::after {
                 @extend %separator;
                 top: 6.5rem;
-                left: 48%;
             }
         }
         .clients_overlay {
@@ -383,7 +442,6 @@ body {
             &::after {
                 @extend %separator;
                 top: 5rem;
-                left: 48%;
             }
         }
         i {
@@ -423,6 +481,17 @@ body {
                 top: 10rem;
                 left: -0.8rem;
             }
+        }
+    }
+    .map {
+        @include background-image($bgImg, 100%, 100%, no-repeat, cover, none);
+        color: $startGradien;
+        cursor: pointer;
+        position: relative;
+        .map__overlay {
+            background-color: $disgnLayer;
+            width: 100%;
+            height: 100%;
         }
     }
     .footer {

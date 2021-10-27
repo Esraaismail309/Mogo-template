@@ -7,19 +7,13 @@ body .about .about__header::after, body .services .services__header::after, body
   height: 3px;
   background-color: #db7475e6; }
 
-.name {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 3px;
-  background-color: #db7475e6; }
-
 body .about .about__header, body .services .services__header, body .design .design__header, body .what_we_do .what_we_do__header, body .team .team__header, body .gallery .gallery__header, body .clients .clients__header, body .blog .blog__header {
   text-align: center;
   position: relative; }
   body .about .about__header::after, body .services .services__header::after, body .design .design__header::after, body .what_we_do .what_we_do__header::after, body .team .team__header::after, body .gallery .gallery__header::after, body .clients .clients__header::after, body .blog .blog__header::after {
-    top: 50%;
-    left: 48%; }
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%); }
   body .about .about__header h5, body .services .services__header h5, body .design .design__header h5, body .what_we_do .what_we_do__header h5, body .team .team__header h5, body .gallery .gallery__header h5, body .clients .clients__header h5, body .blog .blog__header h5 {
     font-family: "Kaushan Script", cursive; }
   body .about .about__header h4, body .services .services__header h4, body .design .design__header h4, body .what_we_do .what_we_do__header h4, body .team .team__header h4, body .gallery .gallery__header h4, body .clients .clients__header h4, body .blog .blog__header h4 {
@@ -64,48 +58,13 @@ body {
       left: 0;
       width: 35%;
       height: 3px;
-      background-color: red; }
-  body header .header .hhh {
+      background-color: #db7475e6; }
+  body header .header .carousel_title {
     position: absolute;
-    bottom: 0rem;
-    left: 14rem;
-    z-index: 555; }
-  @media (max-width: 576px) {
-    body header .header .hhh {
-      bottom: 1.8rem;
-      left: 5.5rem; }
-      body header .header .hhh span {
-        margin-right: 1rem !important;
-        font-size: 15px !important; }
-        body header .header .hhh span h4 {
-          font-size: 16px; } }
-  @media (min-width: 576px) {
-    body header .header .hhh {
-      bottom: 1rem;
-      left: 7.5rem; }
-      body header .header .hhh span {
-        margin-right: 4rem !important;
-        font-size: 15px !important; }
-        body header .header .hhh span h4 {
-          font-size: 17px; } }
-  @media (min-width: 768px) {
-    body header .header .hhh {
-      bottom: 1rem;
-      left: 7.6rem; }
-      body header .header .hhh span {
-        margin-right: 4rem !important; } }
-  @media (min-width: 992px) {
-    body header .header .hhh {
-      bottom: 1rem;
-      left: 8rem; }
-      body header .header .hhh span {
-        margin-right: 5rem !important; } }
-  @media (min-width: 1200px) {
-    body header .header .hhh {
-      bottom: 1rem;
-      left: 13.5rem; }
-      body header .header .hhh span {
-        margin-right: 9rem !important; } }
+    bottom: 1rem;
+    left: 16.5rem;
+    z-index: 555;
+    width: 75%; }
   body header .header .carousel-caption {
     bottom: 12rem !important; }
     body header .header .carousel-caption h2 {
@@ -124,6 +83,50 @@ body {
       padding: .4rem 1.8rem;
       color: #fff;
       font-size: 15px; }
+  @media (max-width: 576px) {
+    body header .header .carousel_title {
+      bottom: 1.8rem;
+      left: 4.2rem; }
+      body header .header .carousel_title span {
+        font-size: 12px !important; }
+        body header .header .carousel_title span h4 {
+          font-size: 16px; } }
+  @media (min-width: 768px) {
+    body header .header .carousel_title {
+      bottom: 1rem;
+      left: 8.5rem;
+      width: 70%; }
+    body header .header .carousel-caption {
+      bottom: 5rem !important; }
+      body header .header .carousel-caption h2 {
+        font-size: 2.5rem; }
+      body header .header .carousel-caption h1 {
+        font-size: 3rem; } }
+  @media (min-width: 992px) {
+    body header .header .carousel_title {
+      bottom: 1rem;
+      left: 11rem; } }
+  @media (min-width: 1200px) {
+    body header .header .carousel-caption {
+      bottom: 10rem !important; }
+      body header .header .carousel-caption h1 {
+        font-size: 6.5rem; }
+      body header .header .carousel-caption h2 {
+        font-size: 3rem; }
+    body header .header .carousel_title {
+      left: 15.5rem; } }
+  @media (min-width: 576px) {
+    body header .header .carousel-caption {
+      bottom: 10rem !important; }
+      body header .header .carousel-caption h1 {
+        font-size: 3rem;
+        z-index: 99999;
+        color: #fff; }
+      body header .header .carousel-caption .carousel_title {
+        bottom: 1rem;
+        left: 6.5rem; }
+        body header .header .carousel-caption .carousel_title span {
+          font-size: 15px !important; } }
   body .about .about__item .overlay {
     width: 100%;
     height: 100%;
@@ -146,8 +149,7 @@ body {
     body .counter h3 {
       font-size: 3rem; }
   body .services .services__header::after {
-    top: 5.5rem;
-    left: 48%; }
+    top: 5.5rem; }
   body .services i {
     color: #3bd3ba; }
   body .design {
@@ -157,8 +159,7 @@ body {
     background-size: cover;
     background-attachment: fixed; }
     body .design .design__header::after {
-      top: 7.5rem;
-      left: 48%; }
+      top: 7.5rem; }
     body .design .desin-overlay {
       background-color: rgba(237, 237, 237, 0.8);
       width: 100%;
@@ -166,7 +167,7 @@ body {
     @media (min-width: 576px) {
       body .design .designe-img {
         bottom: -6rem;
-        right: -4rem; } }
+        right: -2rem; } }
     @media (min-width: 992px) {
       body .design .designe-img {
         bottom: -6rem;
@@ -177,12 +178,36 @@ body {
         right: 17rem; } }
   body .what_we_do i {
     color: #95e1d3; }
+  @media (max-width: 992px) {
+    body .what_we_do .what_we_do__header {
+      position: relative; }
+      body .what_we_do .what_we_do__header::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: #db7475e6;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%); } }
+  @media (max-width: 576px) {
+    body .what_we_do .what_we_do__header {
+      position: relative; }
+      body .what_we_do .what_we_do__header::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 3px;
+        background-color: #db7475e6;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%); } }
   body .slider {
     background-color: #f8f8f8; }
     body .slider i {
       font-size: 2rem;
       color: #3bd3ba;
-      padding: 2.5rem;
+      padding: 2rem;
       border: 2px solid #3bd3ba;
       margin-top: 10px; }
     body .slider h5 {
@@ -192,6 +217,15 @@ body {
       body .slider h5::before {
         top: 10px;
         left: -3.5rem; }
+    @media (max-width: 576px) {
+      body .slider {
+        display: none !important; } }
+    @media (max-width: 992px) {
+      body .slider i {
+        padding: 1rem;
+        font-size: 1.5rem; }
+      body .slider .row {
+        width: 100% !important; } }
   body .team .team__item .overlay {
     width: 100%;
     height: 100%;
@@ -237,7 +271,13 @@ body {
     margin-left: 3.5rem; }
     body .feedback h5::before {
       top: 10px;
-      left: -3.5rem; }
+      left: -4rem; }
+  @media (max-width: 576px) {
+    body .feedback {
+      display: none !important; } }
+  @media (max-width: 992px) {
+    body .feedback .row {
+      width: 100% !important; } }
   body .brands {
     background-color: #f8f8f8;
     padding: 2rem 6rem; }
@@ -248,15 +288,13 @@ body {
     background-size: cover;
     background-attachment: fixed; }
     body .clients .clients__header::after {
-      top: 6.5rem;
-      left: 48%; }
+      top: 6.5rem; }
     body .clients .clients_overlay {
       background-color: rgba(237, 237, 237, 0.8);
       width: 100%;
       height: 100%; }
   body .blog .blog__header::after {
-    top: 5rem;
-    left: 48%; }
+    top: 5rem; }
   body .blog i {
     color: #3bd3ba;
     font-size: 15px; }
@@ -283,6 +321,19 @@ body {
     body .blog .calender {
       top: 10rem;
       left: -0.8rem; } }
+  body .map {
+    background-image: url(../assets/mapbg.jpg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: none;
+    color: #db7475e6;
+    cursor: pointer;
+    position: relative; }
+    body .map .map__overlay {
+      background-color: rgba(237, 237, 237, 0.8);
+      width: 100%;
+      height: 100%; }
   body .footer figure {
     margin: 0;
     padding: 2px; }
