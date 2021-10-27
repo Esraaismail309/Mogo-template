@@ -30,8 +30,7 @@ body {
   body header .navbar {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
-    font-weight: 600;
-    padding: 1rem 8rem; }
+    font-weight: 600; }
     body header .navbar .nav-item {
       position: relative; }
       body header .navbar .nav-item a {

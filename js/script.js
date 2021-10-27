@@ -14,7 +14,7 @@
         if (arabic.innerHTML == "EN") {
             lang.setAttribute("dir", "ltr")
             arabic.innerHTML = "AR"
-            $("href", "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css").attr('link[href="./css/bootstrap.min.css"]')
+            $('link[href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"]').attr("href", './css/bootstrap.min.css')
         }
 
     }
@@ -26,8 +26,3 @@
         }
 
     });
-    // $('a').click(function(e) {
-    //     $('html, body').animate({
-    //         scrollTop: $('#theBird').offset().top // Use element id to get element's location.
-    //     }, 4000);
-    // });

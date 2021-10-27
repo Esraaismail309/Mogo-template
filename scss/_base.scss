@@ -37,7 +37,7 @@ body {
             font-family: $montserrat;
             font-size: 12px;
             font-weight: 600;
-            padding: 1rem 8rem;
+            // padding: 1rem 8rem;
             .nav-item {
                 position: relative;
                 a {
@@ -55,13 +55,6 @@ body {
                         background-color: $endGradient;
                     }
                 }
-            }
-            .navbar-nav {
-                @if dir==rtl {
-                    $left: right;
-                    $right: left;
-                }
-                margin-#{$left}:auto;
             }
         }
         .header {
