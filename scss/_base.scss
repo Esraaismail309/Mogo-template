@@ -74,11 +74,8 @@ body {
                 }
             }
             .carousel_title {
-                position: absolute;
                 bottom: 1rem;
-                left: 16.5rem;
                 z-index: 555;
-                width: 75%;
             }
             .carousel-caption {
                 bottom: 12rem !important;
@@ -91,35 +88,69 @@ body {
                     font-size: 6.5rem;
                     font-weight: 800;
                     width: 60%;
-                    margin: auto
+                    margin: auto;
+                    position: relative;
+                    &::after {
+                        @extend %separator;
+                        background-color: $white !important;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 0.5rem;
+                    }
                 }
                 button {
                     border: 2px solid $white;
                     background-color: transparent;
-                    margin-top: 1rem;
-                    padding: .4rem 1.8rem;
+                    margin-top: 1.2rem;
+                    padding: .3rem 1.5rem;
                     color: $white;
-                    font-size: 15px
+                    font-size: 14px;
                 }
             }
             @include breakpoint-max($sm) {
-                .carousel_title {
-                    bottom: 1.8rem;
-                    left: 4.2rem;
-                    span {
-                        font-size: 12px !important;
-                        h4 {
-                            font-size: 16px;
+                .carousel-caption {
+                    bottom: 3rem !important;
+                    h1 {
+                        font-size: 1.4rem;
+                        &::after {
+                            display: none;
                         }
+                    }
+                    h2 {
+                        font-size: 1rem;
+                    }
+                    button {
+                        margin-top: 0.2rem;
+                        padding: .1rem 1rem;
+                        font-size: 9px
+                    }
+                }
+                .carousel_title {
+                    span {
+                        font-size: 10px !important;
+                        h4 {
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .carousel-control-next,
+                .carousel-control-prev {
+                    bottom: 50%!important;
+                }
+            }
+            @include breakpoint-min($sm) {
+                .carousel-caption {
+                    bottom: 4rem !important;
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+                    h2 {
+                        font-size: 2rem;
                     }
                 }
             }
             @include breakpoint-min($md) {
-                .carousel_title {
-                    bottom: 1rem;
-                    left: 8.5rem;
-                    width: 70%;
-                }
                 .carousel-caption {
                     bottom: 5rem !important;
                     h2 {
@@ -131,39 +162,24 @@ body {
                 }
             }
             @include breakpoint-min($lg) {
-                .carousel_title {
-                    bottom: 1rem;
-                    left: 11rem;
+                .carousel-caption {
+                    bottom: 10rem !important;
+                    h2 {
+                        font-size: 3rem;
+                    }
+                    h1 {
+                        font-size: 4rem;
+                    }
                 }
             }
             @include breakpoint-min($xl) {
                 .carousel-caption {
                     bottom: 10rem !important;
                     h1 {
-                        font-size: 6.5rem;
+                        font-size: 5.5rem;
                     }
                     h2 {
-                        font-size: 3rem;
-                    }
-                }
-                .carousel_title {
-                    left: 15.5rem;
-                }
-            }
-            @include breakpoint-min($sm) {
-                .carousel-caption {
-                    bottom: 10rem !important;
-                    h1 {
-                        font-size: 3rem;
-                        z-index: 99999;
-                        color: $white;
-                    }
-                    .carousel_title {
-                        bottom: 1rem;
-                        left: 6.5rem;
-                        span {
-                            font-size: 15px !important;
-                        }
+                        font-size: 4rem;
                     }
                 }
             }
@@ -172,6 +188,18 @@ body {
     .about {
         .about__header {
             @extend %title;
+        }
+        @include breakpoint-max($sm) {
+            .about__header::after {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 3px;
+                background-color: $startGradien;
+                top: 25%;
+                left: 50%;
+                transform: translateX(-50%)
+            }
         }
         .about__item {
             .overlay {
@@ -215,16 +243,18 @@ body {
         i {
             color: $bgColor
         }
-        // @include breakpoint-max($md) {
-        //     .services__header {
-        //         @extend %title;
-        //         &::after {
-        //             @extend .name;
-        //             top: 5.5rem;
-        //             left: 48%;
-        //         }
-        //     }
-        // }
+        @include breakpoint-max($sm) {
+            .services__header::after {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 3px;
+                background-color: $startGradien;
+                top: 4.3rem;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+        }
     }
     .design {
         @include background-image($designBg, 100%, 100%, no-repeat, cover, fixed);
@@ -306,15 +336,13 @@ body {
             border: 2px solid $bgColor;
             margin-top: 10px;
         }
-        h5 {
+        .blockquote-footer::before {
+            content: "ـــــــــــــــــ";
+            color: $startGradien;
+            font-weight: 800;
+        }
+        span {
             font-family: $Kaushan;
-            position: relative;
-            margin-left: 3.5rem;
-            &::before {
-                @extend %separator;
-                top: 10px;
-                left: -3.5rem;
-            }
         }
         @include breakpoint-max($sm) {
             display: none !important;
@@ -331,7 +359,11 @@ body {
     }
     .team {
         .team__header {
-            @extend %title
+            @extend %title;
+            &::after {
+                @extend %separator;
+                top: 5.5rem;
+            }
         }
         .team__item {
             .overlay {
@@ -359,6 +391,18 @@ body {
             }
             &:hover {
                 box-shadow: 5px 5px 9px 2px $shadowColor;
+            }
+        }
+        @include breakpoint-max($sm) {
+            .team__header p ::after {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 3px;
+                background-color: $startGradien;
+                top: 4.3rem;
+                left: 50%;
+                transform: translateX(-50%)
             }
         }
     }
@@ -389,17 +433,27 @@ body {
                 }
             }
         }
+        @include breakpoint-max($sm) {
+            .gallery__header::after {
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 3px;
+                background-color: $startGradien;
+                top: 4.3rem;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+        }
     }
     .feedback {
-        h5 {
+        .blockquote-footer::before {
+            content: "ـــــــــــــــــ";
+            color: $startGradien;
+            font-weight: 900;
+        }
+        span {
             font-family: $Kaushan;
-            position: relative;
-            margin-left: 3.5rem;
-            &::before {
-                @extend %separator;
-                top: 10px;
-                left: -4rem;
-            }
         }
         @include breakpoint-max($sm) {
             display: none !important;
@@ -428,6 +482,14 @@ body {
             width: 100%;
             height: 100%;
         }
+        .client_separator {
+            position: relative;
+        }
+        .client_separator::after {
+            @extend %separator;
+            left: 0;
+            bottom: -10px;
+        }
     }
     .blog {
         .blog__header {
@@ -442,38 +504,10 @@ body {
             font-size: 15px;
         }
         .calender {
-            background-color: $bgColor;
-            padding: 6px 12px 6px;
-        }
-        @include breakpoint-max($sm) {
-            .calender {
-                top: 5rem;
-                left: -0.8rem;
-            }
-        }
-        @include breakpoint-min($sm) {
-            .calender {
-                top: 11rem;
-                left: -0.8rem;
-            }
-        }
-        @include breakpoint-min($md) {
-            .calender {
-                top: 1.5rem;
-                left: -0.8rem;
-            }
-        }
-        @include breakpoint-min($lg) {
-            .calender {
-                top: 5rem;
-                left: -0.8rem;
-            }
-        }
-        @include breakpoint-min($xl) {
-            .calender {
-                top: 10rem;
-                left: -0.8rem;
-            }
+            width: 50px;
+            bottom: 5%;
+            left: -3%;
+            background-color: $bgColor
         }
     }
     .map {

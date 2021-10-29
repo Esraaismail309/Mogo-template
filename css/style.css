@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
-body .about .about__header::after, body .services .services__header::after, body .design .design__header::after, body .what_we_do .what_we_do__header::after, body .team .team__header::after, body .gallery .gallery__header::after, body .clients .clients__header::after, body .blog .blog__header::after, body .slider h5::before, body .feedback h5::before {
+body .about .about__header::after, body .services .services__header::after, body .design .design__header::after, body .what_we_do .what_we_do__header::after, body .team .team__header::after, body .gallery .gallery__header::after, body .clients .clients__header::after, body .blog .blog__header::after, body header .header .carousel-caption h1::after, body .clients .client_separator::after {
   content: "";
   position: absolute;
   width: 60px;
@@ -59,11 +60,8 @@ body {
       height: 3px;
       background-color: #db7475e6; }
   body header .header .carousel_title {
-    position: absolute;
     bottom: 1rem;
-    left: 16.5rem;
-    z-index: 555;
-    width: 75%; }
+    z-index: 555; }
   body header .header .carousel-caption {
     bottom: 12rem !important; }
     body header .header .carousel-caption h2 {
@@ -74,27 +72,49 @@ body {
       font-size: 6.5rem;
       font-weight: 800;
       width: 60%;
-      margin: auto; }
+      margin: auto;
+      position: relative; }
+      body header .header .carousel-caption h1::after {
+        background-color: #fff !important;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0.5rem; }
     body header .header .carousel-caption button {
       border: 2px solid #fff;
       background-color: transparent;
-      margin-top: 1rem;
-      padding: .4rem 1.8rem;
+      margin-top: 1.2rem;
+      padding: .3rem 1.5rem;
       color: #fff;
-      font-size: 15px; }
+      font-size: 14px; }
   @media (max-width: 576px) {
-    body header .header .carousel_title {
-      bottom: 1.8rem;
-      left: 4.2rem; }
-      body header .header .carousel_title span {
-        font-size: 12px !important; }
-        body header .header .carousel_title span h4 {
-          font-size: 16px; } }
+    body header .header .carousel-caption {
+      bottom: 3rem !important; }
+      body header .header .carousel-caption h1 {
+        font-size: 1.4rem; }
+        body header .header .carousel-caption h1::after {
+          display: none; }
+      body header .header .carousel-caption h2 {
+        font-size: 1rem; }
+      body header .header .carousel-caption button {
+        margin-top: 0.2rem;
+        padding: .1rem 1rem;
+        font-size: 9px; }
+    body header .header .carousel_title span {
+      font-size: 10px !important; }
+      body header .header .carousel_title span h4 {
+        font-size: 11px; }
+    body header .header .carousel-control-next,
+    body header .header .carousel-control-prev {
+      bottom: 50% !important; } }
+  @media (min-width: 576px) {
+    body header .header .carousel-caption {
+      bottom: 4rem !important; }
+      body header .header .carousel-caption h1 {
+        font-size: 2.5rem; }
+      body header .header .carousel-caption h2 {
+        font-size: 2rem; } }
   @media (min-width: 768px) {
-    body header .header .carousel_title {
-      bottom: 1rem;
-      left: 8.5rem;
-      width: 70%; }
     body header .header .carousel-caption {
       bottom: 5rem !important; }
       body header .header .carousel-caption h2 {
@@ -102,30 +122,29 @@ body {
       body header .header .carousel-caption h1 {
         font-size: 3rem; } }
   @media (min-width: 992px) {
-    body header .header .carousel_title {
-      bottom: 1rem;
-      left: 11rem; } }
+    body header .header .carousel-caption {
+      bottom: 10rem !important; }
+      body header .header .carousel-caption h2 {
+        font-size: 3rem; }
+      body header .header .carousel-caption h1 {
+        font-size: 4rem; } }
   @media (min-width: 1200px) {
     body header .header .carousel-caption {
       bottom: 10rem !important; }
       body header .header .carousel-caption h1 {
-        font-size: 6.5rem; }
+        font-size: 5.5rem; }
       body header .header .carousel-caption h2 {
-        font-size: 3rem; }
-    body header .header .carousel_title {
-      left: 15.5rem; } }
-  @media (min-width: 576px) {
-    body header .header .carousel-caption {
-      bottom: 10rem !important; }
-      body header .header .carousel-caption h1 {
-        font-size: 3rem;
-        z-index: 99999;
-        color: #fff; }
-      body header .header .carousel-caption .carousel_title {
-        bottom: 1rem;
-        left: 6.5rem; }
-        body header .header .carousel-caption .carousel_title span {
-          font-size: 15px !important; } }
+        font-size: 4rem; } }
+  @media (max-width: 576px) {
+    body .about .about__header::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: #db7475e6;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%); } }
   body .about .about__item .overlay {
     width: 100%;
     height: 100%;
@@ -151,6 +170,16 @@ body {
     top: 5.5rem; }
   body .services i {
     color: #3bd3ba; }
+  @media (max-width: 576px) {
+    body .services .services__header::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: #db7475e6;
+      top: 4.3rem;
+      left: 50%;
+      transform: translateX(-50%); } }
   body .design {
     background-image: url(../assets/clientbg.jpg);
     background-position: 100% 100%;
@@ -209,13 +238,12 @@ body {
       padding: 2rem;
       border: 2px solid #3bd3ba;
       margin-top: 10px; }
-    body .slider h5 {
-      font-family: "Kaushan Script", cursive;
-      position: relative;
-      margin-left: 3.5rem; }
-      body .slider h5::before {
-        top: 10px;
-        left: -3.5rem; }
+    body .slider .blockquote-footer::before {
+      content: "ـــــــــــــــــ";
+      color: #db7475e6;
+      font-weight: 800; }
+    body .slider span {
+      font-family: "Kaushan Script", cursive; }
     @media (max-width: 576px) {
       body .slider {
         display: none !important; } }
@@ -225,6 +253,8 @@ body {
         font-size: 1.5rem; }
       body .slider .row {
         width: 100% !important; } }
+  body .team .team__header::after {
+    top: 5.5rem; }
   body .team .team__item .overlay {
     width: 100%;
     height: 100%;
@@ -246,6 +276,16 @@ body {
       opacity: 1; }
   body .team .team__item:hover {
     box-shadow: 5px 5px 9px 2px #95e1d3; }
+  @media (max-width: 576px) {
+    body .team .team__header p ::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: #db7475e6;
+      top: 4.3rem;
+      left: 50%;
+      transform: translateX(-50%); } }
   body .gallery .gallery__header {
     position: relative; }
   body .gallery figure {
@@ -264,13 +304,22 @@ body {
     cursor: pointer; }
     body .gallery .gallery_img .gallery_overlay:hover {
       opacity: 1; }
-  body .feedback h5 {
-    font-family: "Kaushan Script", cursive;
-    position: relative;
-    margin-left: 3.5rem; }
-    body .feedback h5::before {
-      top: 10px;
-      left: -4rem; }
+  @media (max-width: 576px) {
+    body .gallery .gallery__header::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background-color: #db7475e6;
+      top: 4.3rem;
+      left: 50%;
+      transform: translateX(-50%); } }
+  body .feedback .blockquote-footer::before {
+    content: "ـــــــــــــــــ";
+    color: #db7475e6;
+    font-weight: 900; }
+  body .feedback span {
+    font-family: "Kaushan Script", cursive; }
   @media (max-width: 576px) {
     body .feedback {
       display: none !important; } }
@@ -292,34 +341,21 @@ body {
       background-color: rgba(237, 237, 237, 0.8);
       width: 100%;
       height: 100%; }
+    body .clients .client_separator {
+      position: relative; }
+    body .clients .client_separator::after {
+      left: 0;
+      bottom: -10px; }
   body .blog .blog__header::after {
     top: 5rem; }
   body .blog i {
     color: #3bd3ba;
     font-size: 15px; }
   body .blog .calender {
-    background-color: #3bd3ba;
-    padding: 6px 12px 6px; }
-  @media (max-width: 576px) {
-    body .blog .calender {
-      top: 5rem;
-      left: -0.8rem; } }
-  @media (min-width: 576px) {
-    body .blog .calender {
-      top: 11rem;
-      left: -0.8rem; } }
-  @media (min-width: 768px) {
-    body .blog .calender {
-      top: 1.5rem;
-      left: -0.8rem; } }
-  @media (min-width: 992px) {
-    body .blog .calender {
-      top: 5rem;
-      left: -0.8rem; } }
-  @media (min-width: 1200px) {
-    body .blog .calender {
-      top: 10rem;
-      left: -0.8rem; } }
+    width: 50px;
+    bottom: 5%;
+    left: -3%;
+    background-color: #3bd3ba; }
   body .map {
     background-image: url(../assets/mapbg.jpg);
     background-position: 100% 100%;
